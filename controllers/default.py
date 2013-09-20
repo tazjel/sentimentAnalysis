@@ -12,6 +12,7 @@ def index():
 def sentence_analyser():
     import requests
     import json
+    from decimal import Decimal
 
     text = request.vars.sentence
     text = text.split('_')
@@ -33,6 +34,6 @@ def sentence_analyser():
     print output["probability"]["neg"]
     return dict(text=text,
                 label=label,
-                neg_prob=round(float(output["probability"]["neg"])*100),
-                neutral_prob=round(float(output["probability"]["neutral"])*100),
-                pos_prob=round(float(output["probability"]["pos"])*100))
+                neg_prob=round(Decimal(output["probability"]["neg"])*100),
+                neutral_prob=round(Decimal(output["probability"]["neutral"])*100),
+                pos_prob=round(Decimal(output["probability"]["pos"])*100))
