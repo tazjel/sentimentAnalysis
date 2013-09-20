@@ -5,6 +5,7 @@ Requirements
 - Python 2.5+
 - PIL
 - web2py
+- requests
 
 Installation
 ============
