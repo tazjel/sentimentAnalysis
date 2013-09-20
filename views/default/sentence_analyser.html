@@ -1,0 +1,17 @@
+{{extend 'layout.html'}}
+<p>
+	<h2>{{=T('Your sentence')}}</h2>
+	<h3>"{{=text}}"</h3>
+	<h2>{{=T('Is')}}</h2>
+	<h3>{{=label}}</h3>
+</p>
+<br />
+<p>
+	<h4>{{=T('Details')}}</h4>
+	<ul>
+		<li>{{=T('Negative probability : %s%%',neg_prob)}}</li>
+		<li>{{=T('Neutral probability : %s%%',neutral_prob)}}</li>
+		<li>{{=T('Positive probability : %s%%',pos_prob)}}</li>
+	</ul>
+</p>
+<p><a href="{{=URL('default','index')}}">Another sentence?</a><p>
